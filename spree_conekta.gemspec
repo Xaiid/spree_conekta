@@ -15,13 +15,16 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,models,db,lib}/**/*'] + %w(MIT-LICENSE Rakefile README.md)
 
+  spree_version = '>= 3.0', '< 4.0'
+  s.add_dependency 'spree_core', spree_version
+  s.add_dependency 'spree_backend', spree_version
+  s.add_dependency 'spree_extension'
 
   s.add_dependency 'oj', '~> 2.14.0'
   s.add_dependency 'faraday'
   s.add_dependency 'typhoeus'
   s.add_dependency 'faraday_middleware'
   s.add_dependency 'activemerchant'
-  s.add_dependency 'spree', '~> 3.0.0.rc2'
   s.add_dependency 'coffee-rails'
   s.add_dependency 'celluloid'
 end
